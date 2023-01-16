@@ -1,3 +1,6 @@
+# import Pkg; Pkg.add("RDatasets")
+# import Pkg; Pkg.add("DataFrames")
+
 using RDatasets
 using DataFrames
 

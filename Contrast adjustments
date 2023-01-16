@@ -1,0 +1,13 @@
+from PIL import Image, ImageEnhance
+import matplotlib.pyplot as plt
+
+im = Image.open("lenna_original.jpg")
+
+enhancer = ImageEnhance.Contrast(im)
+
+factors = [0.5,1.0,1.5,2.0]
+
+for i in factors:
+    im_output = enhancer.enhance(i)
+    imgplot = plt.imshow(im_output)
+    plt.show()

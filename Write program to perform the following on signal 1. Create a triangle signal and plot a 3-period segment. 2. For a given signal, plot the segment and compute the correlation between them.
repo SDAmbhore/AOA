@@ -1,0 +1,24 @@
+from scipy import signal
+import matplotlib.pyplot as plot
+import numpy as np
+t = np.linspace(0, 1, 1000, endpoint=True)
+
+p = np.linspace(0, 1.01, 1000, endpoint=True)
+# Plot the sawtooth wave
+plot.plot(t, signal.sawtooth(2 * np.pi * 5 * t))
+plot.plot(p, signal.sawtooth(2 * np.pi * 4 * t))
+
+# Give x, y, title axis label
+plot.xlabel('Time')
+plot.ylabel('Amplitude')
+plot.title('Sawtooth Signal')
+plot.axhline(y=0, color='k')
+
+# Display
+plot.show()
+
+# correlat = signal.correlate(t,p)
+# plot.plot(correlat)
+correlation = np.correlate(t, p, mode='same')
+print(correlation)
+plot.plot(correlation)

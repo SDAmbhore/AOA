@@ -1,0 +1,8 @@
+from PIL import Image, ImageFilter
+import matplotlib.pyplot as plt
+
+im1 = Image.open(r"./lenna_original.jpg")
+
+im2 = im1.filter(ImageFilter.ModeFilter(size = 3))
+
+plt.imshow(im2)

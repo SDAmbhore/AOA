@@ -1,4 +1,4 @@
-using PlotlyJS  # dependency PlotlyJS
+using PlotlyJS
 
 x = contour(
     z=[

@@ -1,0 +1,14 @@
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+
+img = cv2.imread('lenna.jpg')
+plt.imshow(img)
+plt.show()
+
+box_blur_ker = np.array([[0.1111111, 0.1111111, 0.1111111],[0.1111111, 0.1111111, 0.1111111],[0.1111111, 0.1111111, 0.1111111]])
+
+Box_blur = cv2.filter2D(src=img, ddepth=-1, kernel=box_blur_ker)
+
+plt.imshow(Box_blur)
+plt.show()

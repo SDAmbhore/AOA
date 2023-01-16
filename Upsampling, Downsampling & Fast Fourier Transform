@@ -47,13 +47,3 @@ for i in range(0, m-1):
 # Plot the up sampled image
 print('Up Sampled Image:')
 plt.imshow(img3, cmap="gray")
-
-# import sympy for Fast fourier Transform
-from sympy import fft
-# sequence
-seq = [15, 21, 13, 44]
-
-# fft
-transform = fft(seq)
-print (transform)
-[93, 2 - 23*I, -37, 2 + 23*I]

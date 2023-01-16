@@ -1,0 +1,17 @@
+import cv2
+import numpy as np
+import matplotlib.image as mpimg
+import matplotlib.pyplot as plt
+
+img = cv2.imread('lenna.jpg')
+
+c = 255/(np.log(1 + np.max(img)))
+log_transformed = c * np.log(1 + img)
+
+log_transformed = np.array(log_transformed, dtype = np.uint8)
+
+cv2.imwrite('log_transformed.jpg', log_transformed)
+
+img = mpimg.imread('log_transformed.jpg')  #show saved image (log transformed)
+imgplot = plt.imshow(img)
+plt.show()

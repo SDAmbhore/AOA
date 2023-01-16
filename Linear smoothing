@@ -1,0 +1,20 @@
+from PIL import Image, ImageFilter
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+
+image = Image.open(r"./lenna_original.jpg")
+
+smooth = image.filter(ImageFilter.GaussianBlur)
+
+plt.imshow(smooth)
+
+# Importing Image and ImageFilter module from PIL package
+from PIL import Image, ImageFilter
+	
+# creating a image object
+im1 = Image.open(r"./lenna_original.jpg")
+
+# applying the median filter
+im2 = im1.filter(ImageFilter.MedianFilter(size = 3))
+
+plt.imshow(im2)
